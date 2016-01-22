@@ -29,7 +29,7 @@ import hurry from 'hurry.js'
 
 // create a new curried function
 const curried = hurry(function() {
-
+  // ...
 })
 ```
 

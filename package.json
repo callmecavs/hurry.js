@@ -1,6 +1,6 @@
 {
   "name":        "hurry.js",
-  "version":     "1.0.0",
+  "version":     "0.0.1",
   "description": "An optimized curry function, for enabling full and partial function application.",
   "homepage":    "https://github.com/callmecavs/hurry.js",
   "main":        "dist/hurry.min.js",
