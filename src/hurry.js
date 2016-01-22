@@ -28,8 +28,8 @@ export default function hurry(original) {
 
     // check # of arguments
     return args.length >= target
-      ? original.apply(null, args)                                      // if we have them all, call original
-      : function() {                                                    // otherwise, add new arguments to current ones
+      ? original.apply(null, args)                                          // if we have them all, call original
+      : function() {                                                        // otherwise, add new arguments to current ones
           return collector.apply(null, args.concat(toArray(arguments)))
         }
   }
