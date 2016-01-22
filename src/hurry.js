@@ -22,7 +22,7 @@ export default function hurry(original) {
   // cache number of arguments passed to original function
   const target = original.length
 
-  return function outer() {
+  return function collector() {
     // cache current arguments (future arguments are added to this)
     const args = toArray(arguments)
 
@@ -30,7 +30,7 @@ export default function hurry(original) {
     return args.length >= target
       ? original.apply(null, args)                                      // if we have them all, call original
       : function() {                                                    // otherwise, add new arguments to current ones
-          return outer.apply(null, args.concat(toArray(arguments)))
+          return collector.apply(null, args.concat(toArray(arguments)))
         }
   }
 }
