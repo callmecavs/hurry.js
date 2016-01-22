@@ -16,19 +16,19 @@ function toArray(args) {
 }
 
 // an optimized curry function
-// calls the original function when all arguments have been recieved, caching them until then
+// calls the original function when all arguments have been recieved, collecting them until then
 
 export default function hurry(original) {
   // cache number of arguments passed to original function
   const target = original.length
 
   return function collector() {
-    // cache current arguments (future arguments are added to this)
+    // collect current arguments (future arguments are added to this)
     const args = toArray(arguments)
 
-    // check # of arguments
+    // check number of arguments
     return args.length >= target
-      ? original.apply(null, args)                                          // if we have them all, call original
+      ? original.apply(null, args)                                          // if we have them all, call original function
       : function() {                                                        // otherwise, add new arguments to current ones
           return collector.apply(null, args.concat(toArray(arguments)))
         }
