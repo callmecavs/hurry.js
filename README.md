@@ -2,6 +2,8 @@
 
 [![Hurry.js on NPM](https://img.shields.io/npm/v/hurry.js.svg)](https://www.npmjs.com/package/hurry.js)
 
+An optimized curry function, for enabling full and partial function application.
+
 ## Usage
 
 Hurry was developed with a modern JavaScript workflow in mind. To use it, it's recommended you have a build system in place that can transpile ES6, and bundle modules. For a minimal boilerplate that does so, check out [outset](https://github.com/callmecavs/outset).
